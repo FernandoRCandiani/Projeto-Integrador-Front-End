@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-html{
-    background-image: url('https://i.imgur.com/JVRLGCm.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;    
-    
+html, body{
+    height: 100%;
+    width: 100%;
 }
+
