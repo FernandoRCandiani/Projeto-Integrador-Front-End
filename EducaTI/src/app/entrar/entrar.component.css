@@ -1,0 +1,29 @@
+#fundo{
+    background-image: url('https://i.imgur.com/JVRLGCm.jpg');
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position:fixed;   
+}
+.conteudo{
+    background: rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 658px){
+    img{
+        max-width: 360px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    img{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1366px){
+    #fundo{
+        height: auto;
+    }
+}
