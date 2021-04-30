@@ -9,6 +9,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { ContaComponent } from './conta/conta.component';
+import { PostsComponent } from './posts/posts.component';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { ContaComponent } from './conta/conta.component';
 
     SidebarComponent,
 
-    ContaComponent
+    ContaComponent,
+
+    PostsComponent
 
   ],
   imports: [
