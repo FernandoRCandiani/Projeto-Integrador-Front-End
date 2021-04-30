@@ -10,6 +10,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { ContaComponent } from './conta/conta.component';
 import { PostsComponent } from './posts/posts.component';
+import { MenuComponent } from './menu/menu.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 
 @NgModule({
@@ -22,7 +24,11 @@ import { PostsComponent } from './posts/posts.component';
 
     ContaComponent,
 
-    PostsComponent
+    PostsComponent,
+
+    MenuComponent,
+
+    RodapeComponent
 
   ],
   imports: [
