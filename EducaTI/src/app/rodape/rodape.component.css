@@ -17,14 +17,17 @@ ul.social-network li{
 
 .fa-github:hover{
     color: #35B2ff;
+    opacity: 0.5;
 }
 
 .fa-linkedin:hover{
     color:#35B2ff;
+    opacity: 0.5;
 }
 
 .fa-instagram:hover{
     color: #35B2ff;
+    opacity: 0.5;
 }
 
 .bg-collor{
