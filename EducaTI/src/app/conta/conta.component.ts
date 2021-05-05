@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-conta',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContaComponent implements OnInit {
 
-  constructor() { }
+  foto = environment.foto
 
-  ngOnInit(): void {
+  constructor( 
+       
+    private router: Router
+
+  ) { }
+
+
+
+  ngOnInit() {
   }
 
+  sair(){
+    this.router.navigate(['/entrar'])
+    environment.token = '',
+    environment.nome = '',
+    environment.id = 0,
+    environment.foto = '',
+    environment.email =''
+  }
 }
