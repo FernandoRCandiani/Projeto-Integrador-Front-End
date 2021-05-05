@@ -13,6 +13,7 @@ import { ContaComponent } from './conta/conta.component';
 import { PostsComponent } from './posts/posts.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 
 
@@ -25,7 +26,8 @@ import { RodapeComponent } from './rodape/rodape.component';
     ContaComponent,
     PostsComponent,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    SobreNosComponent
 
   ],
   imports: [
