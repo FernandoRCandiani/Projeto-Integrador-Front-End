@@ -8,21 +8,21 @@
 .conteudo{
     background: rgba(0,0,0,0.5);
 }
-.logo{
-    min-width: 450px;
+img{
+    max-width: 400px;
 }
 
-.titulo{
+/*.titulo{
     max-width: 400px;
     margin-left: 95px;
-}
+}*/
 @media screen and (max-width: 658px){
     img{
         max-width: 360px;
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 375px){
     img{
         display: none;
     }
@@ -35,8 +35,3 @@
     }
 }
 
-@media screen and (min-height: 1080px) {
-    .container-fluid{
-        margin-bottom: auto;
-    }
-}
