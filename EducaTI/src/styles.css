@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 html, body{
-    height: 100%;
-    width: 100%;
+    background-image: url('https://i.imgur.com/JVRLGCm.jpg');
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position:fixed;  
+    
 }
 
+.conteudo{
+    background: rgba(0,0,0,0.5);
+}
