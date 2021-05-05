@@ -7,8 +7,8 @@
 
                     <div class="form-group">
                         <label for="nome"> Nome</label>
-                        <input
-                        [(ngModel)] = 'Usuario.nome'
+                        <input 
+                        [(ngModel)]='usuario.nome'
                         class="form-control"
                         type="text"
                         name="nome"
@@ -20,6 +20,7 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input
+                        [(ngModel)]='usuario.email'
                         class="form-control"
                         type="email"
                         name="email"
@@ -31,6 +32,7 @@
                     <div class="form-group">
                         <label for="foto">Link da foto de perfil</label>
                         <input
+                        [(ngModel)]='usuario.foto'
                         class="form-control"
                         type="text"
                         name="foto"
@@ -42,6 +44,7 @@
                     <div class="form-group">
                         <label for="senha">Senha</label>
                         <input
+                        (input)='cSenha($event)'
                         class="form-control"
                         type="password"
                         name="senha"
@@ -53,6 +56,7 @@
                     <div class="form-group">
                         <label for="confirmSenha"> Confirme a Senha</label>
                         <input
+                        [(ngModel)]='usuario.senha'
                         class="form-control"
                         type="password"
                         name="confirmSenha"
@@ -63,7 +67,7 @@
 
                     <div class="d-flex justify-content-center mb-5 mt-5">
                         <button class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
-                        <button class="btn btn-success" routerLink="/entrar">Cadastrar</button>
+                        <button class="btn btn-success" (click) = 'cadastrar()'>Cadastrar</button>
                     </div>
                 </div>
                 

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
-
 
 import { AppComponent } from './app.component';
 import { EntrarComponent } from './entrar/entrar.component';
@@ -15,29 +15,29 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     EntrarComponent,
     CadastrarComponent,
-
     SidebarComponent,
-
     ContaComponent,
-
     PostsComponent,
-
     MenuComponent,
-
     RodapeComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
-import { Posts } from "./Posts"
-import { Temas } from "./Temas"
+import { Posts } from "./Posts";
+import { Temas } from "./Temas";
 
 export class Usuario{
 
@@ -8,7 +8,7 @@ export class Usuario{
     public email: string
     public senha: string
     public foto: string
-    public temasInscritos : Temas
-    public postsUsuario: Posts
+    public temasInscritos : Temas[]
+    public postsUsuario: Posts[]
 
 }

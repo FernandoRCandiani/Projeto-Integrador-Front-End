@@ -1,5 +1,5 @@
-import { Temas } from "./Temas"
-import { Usuario } from "./Usuario"
+import { Temas } from "./Temas";
+import { Usuario } from "./Usuario";
 
 export class Posts {
 
