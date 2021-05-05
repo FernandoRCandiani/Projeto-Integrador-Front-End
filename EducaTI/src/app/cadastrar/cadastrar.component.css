@@ -11,7 +11,7 @@
     background: rgba(0,0,0,0.5);
 }
 img{
-    max-width: 400px;
+    max-width: 600px;
 }
 
 /*.titulo{
@@ -30,9 +30,17 @@ img{
     }
 }
 
+@media screen and (max-width: 420px){
+    img{
+        max-width: 360px;
+    }
+}
 
 @media screen and (max-width:1366px){
     #fundo{
         height: auto;
+    }
+    img{
+        max-width: 400px;
     }
 }
