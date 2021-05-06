@@ -7,7 +7,8 @@
 
                     <div class="form-group">
                         <label for="nome"> Nome</label>
-                        <input
+                        <input 
+                        [(ngModel)]='usuario.nome'
                         class="form-control"
                         type="text"
                         name="nome"
@@ -19,6 +20,7 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input
+                        [(ngModel)]='usuario.email'
                         class="form-control"
                         type="email"
                         name="email"
@@ -30,6 +32,7 @@
                     <div class="form-group">
                         <label for="foto">Link da foto de perfil</label>
                         <input
+                        [(ngModel)]='usuario.foto'
                         class="form-control"
                         type="text"
                         name="foto"
@@ -41,6 +44,7 @@
                     <div class="form-group">
                         <label for="senha">Senha</label>
                         <input
+                        (input)='cSenha($event)'
                         class="form-control"
                         type="password"
                         name="senha"
@@ -52,6 +56,7 @@
                     <div class="form-group">
                         <label for="confirmSenha"> Confirme a Senha</label>
                         <input
+                        [(ngModel)]='usuario.senha'
                         class="form-control"
                         type="password"
                         name="confirmSenha"
@@ -62,13 +67,13 @@
 
                     <div class="d-flex justify-content-center mb-5 mt-5">
                         <button class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
-                        <button class="btn btn-success" routerLink="/entrar">Cadastrar</button>
+                        <button class="btn btn-success" (click) = 'cadastrar()'>Cadastrar</button>
                     </div>
                 </div>
                 
-                <div class="col-md-6 justify-content-center align-items-center">
-                    <div class="row mb-0 ml-5"><img class="logo" src="https://i.imgur.com/dK5a2RY.png?1" alt="Logo EducaTI"></div>
-                    <div class="row mb-2"><img class="titulo" src="https://i.imgur.com/31S6TRo.png" alt=""></div>
+                <div class="col-md-6 mb-5 justify-content-center align-items-center">
+                    <div class="row p-2"><img class="logo" src="https://i.imgur.com/Y50AQsD.png?1" alt="Logo EducaTI"></div>
+                    
                 </div>
                 
             </div>

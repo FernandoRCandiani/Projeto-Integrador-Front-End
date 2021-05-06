@@ -5,6 +5,7 @@ import { ContaComponent } from './conta/conta.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { PostsComponent } from './posts/posts.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'entrar',pathMatch:'full'},
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path:'conta',component:ContaComponent},
   {path:'entrar',component: EntrarComponent},
   {path:'posts',component:PostsComponent},
-  {path:'sidebar',component:SidebarComponent}
+  {path:'sidebar',component:SidebarComponent},
+  {path:'sobre-nos',component:SobreNosComponent}
+
 ];
 
 @NgModule({
