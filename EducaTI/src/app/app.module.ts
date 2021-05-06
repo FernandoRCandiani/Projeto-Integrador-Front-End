@@ -17,6 +17,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,13 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     ContaComponent,
     PostsComponent,
     MenuComponent,
+<<<<<<< HEAD
+
     RodapeComponent,
+
+=======
+    RodapeComponent,
+>>>>>>> b747b15a5ef80152da058f4775f4593e721149a0
     SobreNosComponent
 
   ],
