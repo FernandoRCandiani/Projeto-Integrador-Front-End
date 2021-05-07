@@ -10,7 +10,7 @@ import { Usuario } from '../model/Usuario';
 })
 export class TemaService {
 
-  token = {headers: new HttpHeaders().set('Authorization',environment.token)}
+  token = {headers: new HttpHeaders().set('Authorization', environment.token)}
 
   constructor(
     private http: HttpClient
@@ -42,8 +42,8 @@ export class TemaService {
   }
 
   
-  inscreverUsuario(idTema: number, idUser: number): Observable<any>{
-    return this.http.post<Temas>(`http://localhost:8080/usuario/inscricao/${idTema}/${idUser}`, this.token)
+  inscreverUsuario(idTema: number, idUser: number): Observable<Temas[]>{
+    return this.http.post<Temas[]>(`http://localhost:8080/usuario/inscricao/${idTema}/${idUser}`, this.token)
   }
 
 

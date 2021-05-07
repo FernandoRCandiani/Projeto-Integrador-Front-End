@@ -46,11 +46,27 @@ export class TemasComponent implements OnInit {
       this.listaTemas = resp })
   }
 
-  inscreverUsuario(){
+  inscreverUsuario(id: number){
     
-    this.temaService.inscreverUsuario(environment.id, this.tema.id).subscribe((resp: Temas[])=>{
-      this.listaInscrito = resp
+    this.temaService.inscreverUsuario(environment.id, id).subscribe((resp: Temas[])=>{
+      this.listaInscrito = resp 
       alert('Tema inscrito com sucesso!')
+      this.router.navigate(['/temas'])
+    })
+  }
+
+  pesquisar(titulo: string){
+
+    this.temaService.getByTitulo(titulo).subscribe((resp: Temas[])=>{
+      this.listaTemas = resp
+      this.router.navigate(['/temas'])
+    })
+
+  }
+
+  pesquisarDescricao(desc: string){
+    this.temaService.getByTexto(desc).subscribe((resp: Temas[])=>{
+      this.listaTemas = resp
       this.router.navigate(['/temas'])
     })
   }
