@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Temas } from '../model/Temas';
+import { Usuario } from '../model/Usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TemaService {
 
-  token = {headers: new HttpHeaders().set('Authorization',environment.token)}
+  token = {headers: new HttpHeaders().set('Authorization', environment.token)}
 
   constructor(
     private http: HttpClient
@@ -41,7 +42,9 @@ export class TemaService {
   }
 
   
-
+  inscreverUsuario(idTema: number, idUser: number): Observable<Temas[]>{
+    return this.http.post<Temas[]>(`http://localhost:8080/usuario/inscricao/${idTema}/${idUser}`, this.token)
+  }
 
 
 
