@@ -14,6 +14,7 @@ import { PostsComponent } from './posts/posts.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { TemasComponent } from './temas/temas.component';
 
 
 
@@ -27,14 +28,9 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     ContaComponent,
     PostsComponent,
     MenuComponent,
-<<<<<<< HEAD
-
     RodapeComponent,
-
-=======
-    RodapeComponent,
->>>>>>> b747b15a5ef80152da058f4775f4593e721149a0
-    SobreNosComponent
+    SobreNosComponent,
+    TemasComponent
 
   ],
   imports: [
