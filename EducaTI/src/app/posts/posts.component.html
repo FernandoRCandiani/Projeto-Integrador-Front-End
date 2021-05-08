@@ -1,75 +1,58 @@
-<div class="container"> 
-    <!-- Inserção do sidebar na Publicação-->
-    <div class="row align-items-center">
-        <div class="col-md-3"> <app-sidebar></app-sidebar> </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <app-sidebar></app-sidebar>
+        </div>
 
-<!-- Publicações-->
-            <div class="col md-9">
-                <div class="card">
-                    <div class="card-header ">
-                        <h1>Publicações </h1>
-                    </div>
-                    <div>
-                        <div>
-                            <form>
+        <div class="col-md-9">
 
-                                <div class="form-group row">
+            <!--Escrever Postagem-->
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center width='100%'">Publicações</h1>
+                </div>
 
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
-                                        placeholder="Escreva aqui a sua Publicação" class="form-control form-control-lg" id="colFormLabelLg" ></textarea>
-                                </div>
-                            </form>
+                <div class="form-group">
+
+                    <input [(ngModel)]='posts.tituloPosts' type="text" class="form-control width='100%'"
+                        id="tituloPosts" placeholder="Digite o título da sua postagem">
+
+                    <textarea [(ngModel)]='posts.textoPosts' type="text" class="form-control width='100%'"
+                        id="textoPosts" rows="4" placeholder="Digite aqui sua postagem">
+                    </textarea>
+                </div>
+            </div>
+            <!--Escrever Postagem-->
+
+
+            <!--Botões-->
+            <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
+                <button class="btn btn-secondary mt-2 mr-3">Foto</button>
+                <button class="btn btn-secondary mt-2 mr-3">Video</button>
+                <button class="btn btn-secondary mt-2 mr-3">Documento</button>
+                <button class="btn btn-secondary mt-2 mr-3" (click)='cadastrar()'>Escreva um artigo</button>
+            </div>
+            <!--Botões-->
+
+
+            <!--Visualização das Postagens-->
+            <div class="container">
+                <div class="mt-5" *ngFor='let posts of listaPosts'>
+                    <div class="card">
+                        <h5 class="card-header">{{posts.tituloPosts}}</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
+                            <p class="card-text text-justify">{{posts.textoPosts}}</p>
+                            <a href="#" class="btn btn-primary mr-3">Curtir</a>
+                            <a href="#" class="btn btn-primary mr-3">Comentar</a>
+                            <a href="#" class="btn btn-primary mr-3">Compartilhar</a>
                         </div>
                     </div>
                 </div>
-                <div class="btn-group justify-allign-center" role="group" aria-label="Exemplo básico">
-                    <button type="button" class="btn btn-secondary mr-3">Foto</button>
-                    <button type="button" class="btn btn-secondary mr-3">Video</button>
-                    <button type="button" class="btn btn-secondary mr-3">Documento</button>
-                    <button type="button" class="btn btn-secondary mr-3">Escreva um artigo</button>
-                </div>
-<!-- /Publicações-->
-                
-                <!-- Visualização do Post-->
-                <div class="card  ">
-                    <div class="card-header">
-                       <h5>Nome do Usuario</h5> 
-                    </div>
-
-
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Título do Post</h5>
-                        <h5 class="card-title text-end">Tema do Post</h5>
-                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deserunt
-                            impedit
-                            quas quaerat, excepturi, exercitationem rem sunt nihil nesciunt, iure illum odio eius?
-                            Eligendi
-                            hic tenetur aliquam voluptatum maiores accusantium.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Non deserunt impedit quas quaerat, excepturi, exercitationem rem sunt
-                            nihil
-                            nesciunt, iure illum odio eius? Eligendi hic tenetur aliquam voluptatum maiores
-                            accusantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deserunt impedit
-                            quas
-                            quaerat, excepturi, exercitationem rem sunt nihil nesciunt, iure illum odio eius? Eligendi
-                            hic
-                            tenetur aliquam voluptatum maiores accusantium.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Non deserunt impedit quas quaerat, excepturi, exercitationem rem sunt
-                            nihil
-                            nesciunt, iure illum odio eius? Eligendi hic tenetur aliquam voluptatum maiores
-                            accusantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deserunt impedit
-                            quas
-                            quaerat, excepturi, exercitationem rem sunt nihil nesciunt, iure illum odio eius? Eligendi
-                            hic
-                            tenetur aliquam voluptatum maiores accusantium.</p>
-                        <a href="#" class="btn btn-primary mr-3">Gostei</a>
-                        <a href="#" class="btn btn-primary mr-3">comentar</a>
-                        <a href="#" class="btn btn-primary mr-3">Compartilhar</a>
-                        <a href="#" class="btn btn-primary mr-3 ">Enviar</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        2 dias atrás
-                    </div>
-                </div>
-                <!-- /Visualização do Post-->
             </div>
+            <!--Visualização das Postagens-->
+
+        </div>
     </div>
+
+</div>
