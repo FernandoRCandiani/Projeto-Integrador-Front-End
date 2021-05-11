@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Posts } from '../model/Posts';
+import { Usuario } from '../model/Usuario';
 import { PostsService } from '../service/posts.service';
 
 @Component({
@@ -13,8 +14,11 @@ import { PostsService } from '../service/posts.service';
 
 export class PostsComponent implements OnInit {
 
+  nome = environment.nome
   posts: Posts = new Posts()
+  usuario: Usuario = new Usuario()
   listaPosts: Posts[]
+
 
   constructor(
     private router: Router,
