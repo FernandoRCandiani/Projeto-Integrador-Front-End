@@ -42,9 +42,7 @@ export class TemaService {
   }
 
   
-  inscreverUsuario(idTema: number, idUser: number): Observable<Temas[]>{
-    return this.http.post<Temas[]>(`http://localhost:8080/usuario/inscricao/${idTema}/${idUser}`, this.token)
-  }
+  
 
 
 

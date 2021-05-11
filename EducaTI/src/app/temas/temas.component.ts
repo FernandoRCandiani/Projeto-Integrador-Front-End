@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Temas } from '../model/Temas';
+import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -15,14 +17,18 @@ export class TemasComponent implements OnInit {
     tema: Temas = new Temas()
     listaTemas : Temas[]
     listaInscrito: Temas[]
+
+    usuario: Usuario = new Usuario()
+    idUser: number = environment.id
     
     constructor(
       private router: Router,
-      private temaService : TemaService
+      private temaService : TemaService,
+      private authService: AuthService
     ) {}
 
   ngOnInit() {
-      window.scroll(0,0)
+    window.scroll(0,0)
 
     if (environment.token ==''){
       this.router.navigate(['/entrar'])
@@ -46,10 +52,16 @@ export class TemasComponent implements OnInit {
       this.listaTemas = resp })
   }
 
+  findAllTemasInscrito(){
+    
+  }
+
   inscreverUsuario(id: number){
     
-    this.temaService.inscreverUsuario(environment.id, id).subscribe((resp: Temas[])=>{
-      this.listaInscrito = resp 
+    this.authService.inscreverUsuario(this.idUser, id).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+      this.usuario.temasInscritos[id] = this.tema
+      this.tema.usuariosInscritos[this.idUser] = this.usuario
       alert('Tema inscrito com sucesso!')
       this.router.navigate(['/temas'])
     })

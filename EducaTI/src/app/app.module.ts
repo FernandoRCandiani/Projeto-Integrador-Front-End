@@ -15,6 +15,8 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TemasComponent } from './temas/temas.component';
+import { EditarTemaComponent } from './editar/editar-tema/editar-tema.component';
+import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
 
 
 
@@ -30,7 +32,9 @@ import { TemasComponent } from './temas/temas.component';
     MenuComponent,
     RodapeComponent,
     SobreNosComponent,
-    TemasComponent
+    TemasComponent,
+    EditarTemaComponent,
+    DeleteTemaComponent
 
   ],
   imports: [
