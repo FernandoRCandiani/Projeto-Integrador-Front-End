@@ -1,62 +1,56 @@
-<div class="container-fluid bg-secondary">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center">Temas</h1>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-md-6 mt-3 mb-4">
-            <h3 class="text-center">Cadastrar tema</h3>
-            <input [(ngModel)]='tema.titulo' type="text" name="titulo" class="form-control mr-sm-2 ml-4 mb-3 txtcollor" placeholder="Digite o título do tema:">
-            <input [(ngModel)]='tema.texto' type="text" name="texto" class="form-control mr-sm-2 ml-4 txtcollor mb-3" placeholder="Digite a descrição do tema:">
-            <button class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
-        </div>
-    </div>
-    <div class="row d-flex justify-content-center align-items-center">
-        <form class="form-inline my-2 my-lg-0 mb-4">
+        <form class="form-inline my-2 my-lg-0">
             <input [(ngModel)] = 'tema.titulo' name="titulo" class="form-control mr-sm-2 ml-4 txtcollor" type="search" placeholder="Pesquisar por título:" aria-label="Pesquisar">
-            
-            <button class="btn btn-outline-info my-2 my-sm-0 txtcollor tmletra " type="submit" (click)= 'pesquisar(tema.titulo)'>Pesquisar</button>
+
+            <button class="btn btn-outline-info my-2 my-sm-0 txtcollor tmletra" type="submit" (click)= 'pesquisar(tema.titulo)'>Pesquisar</button>
 
             <input [(ngModel)] = 'tema.texto' name="texto" class="form-control mr-sm-2 ml-4 txtcollor" type="search" placeholder="Pesquisar por texto:" aria-label="Pesquisar">
-            
+
             <button class="btn btn-outline-info my-2 my-sm-0 txtcollor tmletra" type="submit" (click)= 'pesquisarDescricao(tema.texto)'>Pesquisar</button>
         </form>
     </div>
 </div>  
-    
-<div class="container-fluid bg-secondary">
-    <div class="row d-flex justify-content-center mt-4">
+
+<div class="container-fluid">
+    <div class="row">
         <div class="col-md-12">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-temas-tab" data-toggle="tab" href="#nav-temas" role="tab" aria-controls="nav-home" aria-selected="true">Todos os Temas</a>
-                <a class="nav-item nav-link" id="nav-meustemas-tab" data-toggle="tab" href="#nav-meustemas" role="tab" aria-controls="nav-profile" aria-selected="false">Temas Inscritos</a>
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Todos os Temas</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Temas Inscritos</a>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body" *ngFor='let item of listaTemas'>
+                        <div class="card-body" *ngFor='let tema of listaTemas'>
                           <h5 class="card-title">#{{tema.id}} {{tema.titulo}}</h5>
-                          
+
                           <p class="card-text">{{tema.texto}}</p>
-                          <a routerLink='/temas' class="card-link btn btn-success" (click)='inscreverUsuario(tema.id)'>
-                              Cadastrar
-                          </a>
-                          <a [routerLink]="['/editar-tema', tema.id]" class="card-link" >Editar</a>
-                          <a [routerLink]="['/apagar-tema', tema.id]" class="card-link" >Apagar</a>
                           
+                          <a class="card-link">
+                              <button class="btn btn-success" (click)='inscreverUsuario(tema.id)'>Inscrever-se</button>
+                              
+                          </a>
+
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body" *ngFor='let tema of usuario.temasInscritos'>
+                        <div class="card-body" *ngFor='let tema of listaTemas'>
                           <h5 class="card-title">#{{tema.id}} {{tema.titulo}}</h5>
                           
                           <p class="card-text">{{tema.texto}}</p>
-                      
+                            
+                          <button class="btn" [routerLink]="['editar-tema', tema.id]">Editar</button>
+                          <button class="btn btn-danger" [routerLink]="['delete-tema', tema.id]">Apagar</button>
                           
                         </div>
                     </div>

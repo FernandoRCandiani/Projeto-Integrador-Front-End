@@ -10,7 +10,9 @@ import { Usuario } from '../model/Usuario';
 })
 export class TemaService {
 
-  token = {headers: new HttpHeaders().set('Authorization', environment.token)}
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
 
   constructor(
     private http: HttpClient
@@ -42,8 +44,7 @@ export class TemaService {
   }
 
   putTema(tema:Temas) : Observable<Temas>{
-    return this.http.put<Temas>('http://localhost:8080/tema', tema,
-    this.token)
+    return this.http.put<Temas>('http://localhost:8080/tema', tema, this.token)
   }
 
   deleteTema(id : number) {
