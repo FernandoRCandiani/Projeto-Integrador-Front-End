@@ -16,7 +16,7 @@ export class TemasComponent implements OnInit {
 
     tema: Temas = new Temas()
     listaTemas : Temas[]
-    listaInscrito: Temas[]
+    
 
     usuario: Usuario = new Usuario()
     idUser: number = environment.id
@@ -52,16 +52,10 @@ export class TemasComponent implements OnInit {
       this.listaTemas = resp })
   }
 
-  findAllTemasInscrito(){
-    
-  }
-
   inscreverUsuario(id: number){
     
     this.authService.inscreverUsuario(this.idUser, id).subscribe((resp: Usuario)=>{
       this.usuario = resp
-      this.usuario.temasInscritos[id] = this.tema
-      this.tema.usuariosInscritos[this.idUser] = this.usuario
       alert('Tema inscrito com sucesso!')
       this.router.navigate(['/temas'])
     })

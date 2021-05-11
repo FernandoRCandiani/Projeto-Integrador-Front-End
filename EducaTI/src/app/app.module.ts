@@ -17,6 +17,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TemasComponent } from './temas/temas.component';
 import { EditarTemaComponent } from './editar/editar-tema/editar-tema.component';
 import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
+import { MeusPostsComponent } from './meus-posts/meus-posts.component';
 
 
 
@@ -34,7 +35,8 @@ import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component'
     SobreNosComponent,
     TemasComponent,
     EditarTemaComponent,
-    DeleteTemaComponent
+    DeleteTemaComponent,
+    MeusPostsComponent
 
   ],
   imports: [

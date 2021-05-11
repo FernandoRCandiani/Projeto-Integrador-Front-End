@@ -31,6 +31,10 @@ export class AuthService {
       inscreverUsuario(idTema: number, idUser: number): Observable<Usuario>{
         return this.http.post<Usuario>(`http://localhost:8080/usuario/inscricao/${idTema}/${idUser}`, this.token)
       }
+
+      encontrar(idUser: number): Observable<Usuario>{
+        return this.http.get<Usuario>(`http://localhost:8080/usuario/${idUser}`, this.token)
+      }
     
       logado(){
     

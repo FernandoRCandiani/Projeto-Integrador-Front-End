@@ -5,6 +5,7 @@ import { ContaComponent } from './conta/conta.component';
 import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
 import { EditarTemaComponent } from './editar/editar-tema/editar-tema.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { MeusPostsComponent } from './meus-posts/meus-posts.component';
 import { PostsComponent } from './posts/posts.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'sobre-nos',component:SobreNosComponent},
   {path:'temas', component: TemasComponent},
   {path:'editar-tema/:id', component: EditarTemaComponent},
-  {path:'delete-tema/:id', component: DeleteTemaComponent}
+  {path:'delete-tema/:id', component: DeleteTemaComponent},
+  {path:'meus-posts/:id', component: MeusPostsComponent}
 
 ];
 
