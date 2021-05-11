@@ -24,8 +24,6 @@ export class AuthService {
       }
       cadastrar(usuario: Usuario) :Observable<Usuario>{
         return this.http.post<Usuario>("http://localhost:8080/usuario/cadastrar", usuario)
-    
-    
       }
 
       inscreverUsuario(idTema: number, idUser: number): Observable<Usuario>{
@@ -34,6 +32,10 @@ export class AuthService {
 
       encontrar(idUser: number): Observable<Usuario>{
         return this.http.get<Usuario>(`http://localhost:8080/usuario/${idUser}`, this.token)
+      }
+
+      atualizar(usuario: Usuario) :Observable<Usuario>{
+        return this.http.put<Usuario>("http://localhost:8080/usuario", usuario, this.token)
       }
     
       logado(){

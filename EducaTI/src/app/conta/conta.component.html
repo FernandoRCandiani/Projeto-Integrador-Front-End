@@ -105,13 +105,14 @@
         <form>
           <div class="form-group">
             <label for="nomeUsuario">Adicione novo nome</label>
-            <input type="text" class="form-control" id="nomeUsuario" placeholder="Novo nome">
+            <input [(ngModel)]='usuario.nome' type="text" class="form-control" id="nomeUsuario" placeholder="Novo nome">
           </div>
         </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary">Salvar mudanças</button>
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal" routerLink='/conta'>Cancelar</button>
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal" (click)='atualizar()'>Atualizar</button>
       </div>
     </div>
   </div>
