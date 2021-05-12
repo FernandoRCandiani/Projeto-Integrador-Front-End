@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContaComponent } from './conta/conta.component';
+
 import { DeletePostsComponent } from './delete/delete-posts/delete-posts.component';
 import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
 import { EditarPostsComponent } from './editar/editar-posts/editar-posts.component';
@@ -17,7 +18,6 @@ const routes: Routes = [
   {path:'', redirectTo:'entrar',pathMatch:'full'},
 
   {path:'cadastrar',component:CadastrarComponent},
-  {path:'conta',component:ContaComponent},
   {path:'entrar',component: EntrarComponent},
   {path:'posts',component:PostsComponent},
   {path:'sidebar',component:SidebarComponent},
@@ -27,7 +27,8 @@ const routes: Routes = [
   {path:'delete-tema/:id', component: DeleteTemaComponent},
   {path:'meus-posts/:id', component: MeusPostsComponent},
   {path: 'editar-posts/:id', component: EditarPostsComponent},
-  {path: 'delete-posts/:id', component: DeletePostsComponent}
+  {path: 'delete-posts/:id', component: DeletePostsComponent},
+  {path:'conta/:id',component:ContaComponent},
 
 ];
 
