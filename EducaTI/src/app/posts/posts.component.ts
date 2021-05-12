@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Posts } from '../model/Posts';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { PostsService } from '../service/posts.service';
 
 @Component({
@@ -23,7 +24,8 @@ export class PostsComponent implements OnInit {
   constructor(
     private router: Router,
     private postsService: PostsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -39,7 +41,7 @@ export class PostsComponent implements OnInit {
   cadastrar() {
     this.postsService.postPosts(this.posts).subscribe((resp: Posts) => {
       this.posts = resp
-      alert('Post criado com sucesso!')
+      this.alertas.showAlertSuccess('Post criado com sucesso!')
       this.findAllPosts()
       this.posts = new Posts()
     })
