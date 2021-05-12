@@ -17,7 +17,6 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TemasComponent } from './temas/temas.component';
 import { EditarTemaComponent } from './editar/editar-tema/editar-tema.component';
-import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
 import { MeusPostsComponent } from './meus-posts/meus-posts.component';
 import { EditarPostsComponent } from './editar/editar-posts/editar-posts.component';
 import { DeletePostsComponent } from './delete/delete-posts/delete-posts.component';
@@ -40,7 +39,6 @@ import { AlertasComponent } from './alertas/alertas.component';
     SobreNosComponent,
     TemasComponent,
     EditarTemaComponent,
-    DeleteTemaComponent,
     MeusPostsComponent,
     EditarPostsComponent,
     DeletePostsComponent,
