@@ -12,7 +12,9 @@
           <a class="nav-link txtcollor mr-4" routerLink = '/posts' >Pagina Inicial <span class="sr-only">(página atual)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link txtcollor mr-4" routerLink = '/conta'>Meu Perfil</a>
+
+            <a class="nav-link txtcollor" [routerLink]= "['/conta', id]">Meu Perfil</a>
+
           </li>
           <li class="nav-item">
             <a class="nav-link txtcollor mr-4" routerLink = '/meus-posts'>Minhas postagens</a>
@@ -27,8 +29,9 @@
         <button class="btn btn-outline-info my-2 my-sm-0 txtcollor" type="submit">Pesquisar</button>
       </form>
       <div class="nav-item active">
-        <a class="nav-link txtcollor" routerLink='/conta' >
-            <img src="" alt="Foto Usuario">
+        <a class="nav-link txtcollor" [routerLink]= "['/conta', id]">
+            <img type="button" class="rounded-circle border border-dark outline" src="{{foto}}"
+            width="64" height="64" alt="Foto do usuario">
         </a>
       </div>
       </div>

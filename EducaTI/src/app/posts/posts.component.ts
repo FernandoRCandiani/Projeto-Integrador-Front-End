@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Posts } from '../model/Posts';
+import { Temas } from '../model/Temas';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { PostsService } from '../service/posts.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-posts',
@@ -16,6 +19,12 @@ import { PostsService } from '../service/posts.service';
 export class PostsComponent implements OnInit {
 
   nome = environment.nome
+  idUsuario = environment.id
+
+  tema: Temas = new Temas()
+  listaTemas: Temas[]
+  idTema: number
+
   posts: Posts = new Posts()
   usuario: Usuario = new Usuario()
   listaPosts: Posts[]
@@ -24,8 +33,9 @@ export class PostsComponent implements OnInit {
   constructor(
     private router: Router,
     private postsService: PostsService,
-    private route: ActivatedRoute,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private authService: AuthService,
+    private temasService: TemaService
   ) { }
 
   ngOnInit() {
@@ -35,10 +45,28 @@ export class PostsComponent implements OnInit {
     }
 
     this.findAllPosts()
+    this.findAllTemas()
+  }
 
+  findAllTemas(){
+    this.temasService.getAllTema().subscribe((resp: Temas[])=>{
+      this.listaTemas = resp
+    })
+  }
+
+  findByIdTema(){
+    this.temasService.getById(this.idTema).subscribe((resp: Temas) =>{
+      this.tema = resp
+    })
   }
 
   cadastrar() {
+    this.tema.id = this.idTema
+    this.posts.temas = this.tema
+
+    this.usuario.id = this.idUsuario
+    this.posts.usuarioCriador = this.usuario
+  
     this.postsService.postPosts(this.posts).subscribe((resp: Posts) => {
       this.posts = resp
       this.alertas.showAlertSuccess('Post criado com sucesso!')
@@ -50,6 +78,12 @@ export class PostsComponent implements OnInit {
   findAllPosts() {
     this.postsService.getAllPosts().subscribe((resp: Posts[]) => {
       this.listaPosts = resp
+    })
+  }
+
+  findByIdUsuario(){
+    this.authService.encontrar(this.idUsuario).subscribe((resp: Usuario) =>{
+      this.usuario = resp
     })
   }
 

@@ -1,179 +1,88 @@
-<div class="contaniner-fluid ">
+<div class="container">
 
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-12 mt-3">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="texte-center">Perfil</h1>
 
-      <div class="row d-flex justify-content-center">
-        <h1>Conta</h1>
-      </div>
-    </div>
-  </div>
+      <div class="col-md-12 text-white conteudo">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6 mt-5 mb-5 justify-content-center">
+                <h1 class="text-center mb-3">Atualizar perfil</h1>
 
-  <div class="d-flex justify-content-center">
-    <div class="col-6">
-      <hr>
-    </div>
-  </div>
+                <div class="form-group">
+                    <label for="nome"> Nome</label>
+                    <input 
+                    [(ngModel)]='usuario.nome'
+                    class="form-control"
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Entre com o nome"
+                    />
+                </div>
 
-  <div class="row d-flex justify-content-center mt-3 mb-5">
-    <div class="col-md-0">
-      <form>
-        <a>
-          <img type="button" class="rounded-circle border border-dark outline" src="https://site112.com/img/180x180.png"
-            width="180" height="180" alt="Foto do usuario" data-toggle="modal" data-target="#foto">
-        </a>
-      </form>
-    </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                    [(ngModel)]='usuario.email'
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Entre com um email"
+                    />
+                </div>
 
-    <div class="col-md-3 mt-3 ml-3 mr-3">
-      <form>
+                <div class="form-group">
+                    <label for="foto">Link da foto de perfil</label>
+                    <input
+                    [(ngModel)]='usuario.foto'
+                    class="form-control"
+                    type="text"
+                    name="foto"
+                    id="foto"
+                    placeholder="Entre com um link para foto"
+                    />
+                </div>
 
-        <div class="form-group">
-          <button type="button" class="btn btn-outline-primary btn-lg btn-block" data-toggle="modal"
-            data-target="#Nome">Nome
-          </button>
-        </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input
+                    (input)='cSenha($event)'
+                    class="form-control"
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    placeholder="Entre com uma senha"
+                    />
+                </div>
 
-        <div class="form-group">
-          <button type="button" class="btn btn-outline-primary btn-lg btn-block" data-toggle="modal"
-            data-target="#email">E-mail
-          </button>
-        </div>
+                <div class="form-group">
+                    <label for="confirmSenha"> Confirme a Senha</label>
+                    <input
+                    [(ngModel)]='usuario.senha'
+                    class="form-control"
+                    type="password"
+                    name="confirmSenha"
+                    id="confirmSenha"
+                    placeholder="Entre com uma senha"
+                    />
+                </div>
 
-        <div class="form-group">
-          <button type="button" class="btn btn-outline-primary btn-lg btn-block" data-toggle="modal"
-            data-target="#Senha">Senha
-          </button>
-
-
-        </div>
-        <div class="container">
-          <div class="row justify-content-start">
-            <div class="col-0">
-              <button type="button" class="btn btn-outline-primary btn-lg btn-block" (click) = 'sair()' >Sair</button>
+                <div class="d-flex justify-content-center mb-5 mt-5">
+                    <button class="btn btn-danger mr-4" routerLink="/posts">Cancelar</button>
+                    <button class="btn btn-success" (click) = 'atualizar()'>Atualizar</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger mr-4" routerLink="/entrar">Sair</button>
+                </div>
             </div>
-          </div>
+            
+           
+            
         </div>
-
-      </form>
     </div>
-  </div>
-</div>
 
-
-
-<!--Model mudar foto-->
-<div class="modal fade" id="foto" tabindex="-1" role="dialog" aria-labelledby="mudarFoto"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mudarFoto">Mudar foto</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <form>
-          <div class="form-group">
-            <label for="fotoUsuario">Adicione a foto</label>
-            <input type="text" class="form-control" id="fotoUsuario" placeholder="Link da foto">
-          </div>
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Model alterar nome-->
-<div class="modal fade" id="Nome" tabindex="-1" role="dialog" aria-labelledby="alterarNome" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alterarNome">Alterar Nome</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <form>
-          <div class="form-group">
-            <label for="nomeUsuario">Adicione novo nome</label>
-            <input [(ngModel)]='usuario.nome' type="text" class="form-control" id="nomeUsuario" placeholder="Novo nome">
-          </div>
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary" data-dismiss="modal" routerLink='/conta'>Cancelar</button>
-        <button type="button" class="btn btn-outline-primary" data-dismiss="modal" (click)='atualizar()'>Atualizar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Model alterar e-mail-->
-<div class="modal fade" id="email" tabindex="-1" role="dialog" aria-labelledby="alterarEmail" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alterarEmail">Alterar E-mail</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <form>
-          <div class="form-group">
-            <label for="emailUsuario">Adicione novo e-mail</label>
-            <input type="text" class="form-control" id="emailUsuario" placeholder="Novo e-mail">
-          </div>
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Model alterar senha-->
-<div class="modal fade" id="Senha" tabindex="-1" role="dialog" aria-labelledby="alterarSenha" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alterarSenha">Alterar senha</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <form>
-          <div class="form-group">
-            <label for="senhaNova">Adicione nova senha</label>
-            <input type="password" class="form-control" id="senhaNova" placeholder="Nova senha">
-          </div>
-        </form>
-        <form>
-          <div class="form-group">
-            <label for="confirmeSenha">Confirme a nova senha</label>
-            <input type="password" class="form-control" id="confirmeSenha" placeholder="Confirme a senha">
-          </div>
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-primary">Salvar mudanças</button>
-      </div>
     </div>
   </div>
 </div>
