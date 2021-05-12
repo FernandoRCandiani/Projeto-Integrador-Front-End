@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Atualizar Postagem</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+
+            <!--Escrever Postagem-->
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center width='100%'">Publicações</h1>
+                </div>
+
+                <div class="form-group">
+
+                    <input [(ngModel)]='posts.tituloPosts' type="text" class="form-control width='100%'"
+                        id="tituloPosts" placeholder="Digite o título da sua postagem">
+
+                    <textarea [(ngModel)]='posts.textoPosts' type="text" class="form-control width='100%'"
+                        id="textoPosts" rows="4" placeholder="Digite aqui sua postagem">
+                    </textarea>
+                </div>
+            </div>
+            <!--Escrever Postagem-->
+
+            <!--Botões-->
+            <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
+                <button class="btn btn-danger mt-2 mr-3" routerLink='/posts'>Cancelar</button>
+                <button class="btn btn-success mt-2" (click)='atualizar()'>Atualizar</button>
+            </div>
+            <!--Botões-->
+
+        </div>
+    </div>
+</div>

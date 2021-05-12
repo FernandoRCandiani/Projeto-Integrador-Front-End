@@ -1,0 +1,38 @@
+<div class="container mb-5 mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Apagar postagem</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa postagem?</h4>
+        </div>
+    </div>
+
+    <!--Escrever Postagem-->
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center width='100%'">Publicações</h1>
+        </div>
+
+        <div class="form-group">
+
+            <input [(ngModel)]='posts.tituloPosts' type="text" class="form-control width='100%'"
+                id="tituloPosts" placeholder="Digite o título da sua postagem">
+
+            <textarea [(ngModel)]='posts.textoPosts' type="text" class="form-control width='100%'"
+                id="textoPosts" rows="4" placeholder="Digite aqui sua postagem">
+            </textarea>
+        </div>
+    </div>
+    <!--Escrever Postagem-->
+
+    <div class="row mt-5">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button class="btn btn-danger mr-4" routerLink='/posts'>Não</button>
+            <button class="btn btn-success" (click)='apagar()'>Sim</button>
+        </div>
+    </div>
+</div>

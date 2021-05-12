@@ -27,10 +27,7 @@
 
             <!--Botões-->
             <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
-                <button class="btn btn-secondary mt-2 mr-3">Foto</button>
-                <button class="btn btn-secondary mt-2 mr-3">Video</button>
-                <button class="btn btn-secondary mt-2 mr-3">Documento</button>
-                <button class="btn btn-secondary mt-2 mr-3" (click)='cadastrar()'>Escreva um artigo</button>
+                <button class="btn btn-secondary mt-2 mr-3" (click)='cadastrar()'>Publicar</button>
             </div>
             <!--Botões-->
 
@@ -43,9 +40,8 @@
                         <div class="card-body">
                             <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
                             <p class="card-text text-justify">{{posts.textoPosts}}</p>
-                            <a href="#" class="btn btn-primary mr-3">Curtir</a>
-                            <a href="#" class="btn btn-primary mr-3">Comentar</a>
-                            <a href="#" class="btn btn-primary mr-3">Compartilhar</a>
+                            <a [routerLink]="['/editar-posts', posts.idPosts]"  class="btn btn-primary mr-3">Editar</a>
+                            <a [routerLink]="['/delete-posts', posts.idPosts]" class="btn btn-primary mr-3">Apagar</a>
                         </div>
                     </div>
                 </div>
