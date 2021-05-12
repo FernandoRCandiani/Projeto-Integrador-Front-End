@@ -30,6 +30,7 @@ ul.social-network li{
 .bg-collor{
 
     background-color: #020005;
+    opacity: 0.9;
 }
 
 .txtcollor{
@@ -42,4 +43,8 @@ a:link
 } 
 .tmletra{
     font-size:  24px; 
+}
+
+.escondeMenu { 
+    overflow: hidden; 
 }
