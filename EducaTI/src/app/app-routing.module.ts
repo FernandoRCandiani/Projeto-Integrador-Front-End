@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContaComponent } from './conta/conta.component';
+import { DeletePostsComponent } from './delete/delete-posts/delete-posts.component';
 import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component';
+import { EditarPostsComponent } from './editar/editar-posts/editar-posts.component';
 import { EditarTemaComponent } from './editar/editar-tema/editar-tema.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { MeusPostsComponent } from './meus-posts/meus-posts.component';
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path:'temas', component: TemasComponent},
   {path:'editar-tema/:id', component: EditarTemaComponent},
   {path:'delete-tema/:id', component: DeleteTemaComponent},
-  {path:'meus-posts/:id', component: MeusPostsComponent}
+  {path:'meus-posts/:id', component: MeusPostsComponent},
+  {path: 'editar-posts/:id', component: EditarPostsComponent},
+  {path: 'delete-posts/:id', component: DeletePostsComponent}
 
 ];
 
