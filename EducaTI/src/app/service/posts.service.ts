@@ -37,4 +37,12 @@ export class PostsService {
     return this.http.post<Posts>('http://localhost:8080/post', posts, this.token)
   }
 
+  putPosts(posts: Posts): Observable<Posts>{
+    return this.http.put<Posts>('http://localhost:8080/post', posts, this.token)
+  }
+
+  deletePosts(idPosts: number){
+    return this.http.delete(`http://localhost:8080/post/${idPosts}`, this.token)
+  }
+
 }
