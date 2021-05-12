@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Posts } from 'src/app/model/Posts';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { PostsService } from 'src/app/service/posts.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -16,7 +17,8 @@ export class EditarPostsComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private postsService: PostsService
+    private postsService: PostsService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -37,7 +39,7 @@ export class EditarPostsComponent implements OnInit {
   atualizar(){
     this.postsService.putPosts(this.posts).subscribe((resp: Posts) => {
       this.posts = resp
-      alert("Postagem atualizada!!")
+      this.alertas.showAlertInfo("Postagem atualizada!!")
       this.router.navigate(['/posts'] )
     })
   }

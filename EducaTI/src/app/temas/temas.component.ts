@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Temas } from '../model/Temas';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 
@@ -24,7 +25,8 @@ export class TemasComponent implements OnInit {
     constructor(
       private router: Router,
       private temaService : TemaService,
-      private authService: AuthService
+      private authService: AuthService,
+      private alertas: AlertasService
     ) {}
 
   ngOnInit() {
@@ -41,7 +43,7 @@ export class TemasComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Temas)=> {
       this.tema = resp
-      alert ('Parabéns, tema criado com sucesso!')
+      this.alertas.showAlertSuccess('Parabéns, tema criado com sucesso!')
       this.findAllTemas()
       this.tema = new Temas()
     })
@@ -56,7 +58,7 @@ export class TemasComponent implements OnInit {
     
     this.authService.inscreverUsuario(this.idUser, id).subscribe((resp: Usuario)=>{
       this.usuario = resp
-      alert('Tema inscrito com sucesso!')
+      this.alertas.showAlertSuccess('Tema inscrito com sucesso!')
       this.router.navigate(['/temas'])
     })
   }

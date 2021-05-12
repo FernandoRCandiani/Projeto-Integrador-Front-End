@@ -20,6 +20,7 @@ import { DeleteTemaComponent } from './delete/delete-tema/delete-tema.component'
 import { MeusPostsComponent } from './meus-posts/meus-posts.component';
 import { EditarPostsComponent } from './editar/editar-posts/editar-posts.component';
 import { DeletePostsComponent } from './delete/delete-posts/delete-posts.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 
@@ -40,7 +41,8 @@ import { DeletePostsComponent } from './delete/delete-posts/delete-posts.compone
     DeleteTemaComponent,
     MeusPostsComponent,
     EditarPostsComponent,
-    DeletePostsComponent
+    DeletePostsComponent,
+    AlertasComponent
 
   ],
   imports: [
