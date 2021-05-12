@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { EntrarComponent } from './entrar/entrar.component';
@@ -21,6 +22,7 @@ import { MeusPostsComponent } from './meus-posts/meus-posts.component';
 import { EditarPostsComponent } from './editar/editar-posts/editar-posts.component';
 import { DeletePostsComponent } from './delete/delete-posts/delete-posts.component';
 import { AlertasComponent } from './alertas/alertas.component';
+
 
 
 
@@ -49,7 +51,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,
