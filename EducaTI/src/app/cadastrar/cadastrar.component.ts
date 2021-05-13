@@ -30,6 +30,14 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar(){
+    if(this.usuario.nome == ''){
+      this.alertas.showAlertDanger('Está faltando seu nome')
+    }
+    if(this.usuario.email == ''){
+      this.alertas.showAlertDanger('Está faltando seu E-mail')
+    }
+    
+
     if(this.usuario.senha != this.confirmaSenha){
       this.alertas.showAlertDanger('Senhas estão incorretas')
     }else{
