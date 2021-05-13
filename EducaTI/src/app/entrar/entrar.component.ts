@@ -38,11 +38,14 @@ export class EntrarComponent implements OnInit {
 
         this.router.navigate(['/posts'])
       }, erro=>{
+        if(erro.status == 401){
+          this.alertas.showAlertDanger('Email ou senha inválidos! Favor verificar')
+        }
+
         if(erro.status == 500){
           this.alertas.showAlertDanger('Email ou senha inválidos! Favor verificar')
         }
       }
     )
   }
-
 }
