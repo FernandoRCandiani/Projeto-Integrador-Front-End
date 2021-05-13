@@ -5,10 +5,19 @@ html, body{
     -webkit-background-size: cover;
     background-size: cover;
     background-position:fixed;  
+    scroll-behavior: smooth ;
    
 }
 
 .conteudo{
-    background: rgba(0,0,0,0.5);
-    opacity: 0.9;
+    background: rgba(0,0,0,0.9);
+    
+}
+
+.fs-54{
+    font-size: 54pt;
+}
+
+.fs-18{
+    font-size: 18pt;
 }
