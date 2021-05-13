@@ -13,3 +13,19 @@
 .mt-5{
     margin-top: 5pt;
 }
+
+.carousel-caption{
+    background: rgba(0,0,0,0.8);
+}
+
+#postagens{
+    margin: 30px;
+}
+
+@media screen and (max-width: 500px) {
+ 
+    .imagem-group{
+        max-width: 300px;
+        max-height: 300px;
+    }   
+}

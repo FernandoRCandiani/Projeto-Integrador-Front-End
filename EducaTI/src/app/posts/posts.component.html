@@ -1,11 +1,79 @@
-<div class="container">
+<div class="container-fluid">
+    
+    
+    <div class="row d-flex align-items-center bg-secondary">
+
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 text-white font-weight-bold">
+                    <h1 class="fs-54">Bem vindo(a), {{nome}}</h1>
+                    <h5 class="fs-18">Esta é a EducaTI, um espaço para compartilhar e aprender sobre tecnologia</h5>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-6 mb-5">
+                    <a class="btn btn-outline-light" href="#postagens">Quero compartilhar conhecimento!</a>
+                </div>
+            </div>                
+        </div>
+
+        <div class="col-md-6">
+            <img class="imagem-group" src="https://i.imgur.com/MFYqx91.png" alt="Conversa em grupo" height="500px" width="500px">
+        </div>
+
+    </div>
+
+    <div class="row d-flex align-items-center">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100 " src="https://media-exp1.licdn.com/dms/image/C4E12AQFVcNo_93DOUA/article-cover_image-shrink_600_2000/0/1548066176843?e=1624492800&v=beta&t=CdQClqvkYMBEMhWR_zi-pdJYj5mP8KRhAZBxS474Hwk" alt="Primeiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Um ambiente para troca de ideias</h5>
+                    <p>EducaTI é uma rede social focada em ensino, onde os usuários são alunos e professores, trocando conhecimento entre si de maneira colaborativa</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 " src="https://thumbs.dreamstime.com/b/business-team-group-communication-concept-speech-bubbles-as-72256112.jpg" alt="Segundo Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Um espaço aberto a todes</h5>
+                    <p>Nós da EducaTI acreditamos que o acesso a educação e a tecnologia é um direito de todes, por isso nosso ambiente é o mais inclusivo possível. Não toleramos preconceito de qualquer forma!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 " src="https://www.luxuryugandaholidays.com/wp-content/themes/ssl/images/uganda-rwanda-group-safaris.jpg" alt="Terceiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Aproveite!</h5>
+                    <p>Queremos que nossos usuários aproveitem nosso ambiente e criem laços entre si, bem como se desenvolver tecnicamente. Se divirtam, aprendam, cresçam em conjunto. A tecnologia é para todes!</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
+    </div>
+
+    
+    
     <div class="row justify-content-center mt-5">
         
 
         <div class="col-md-9">
 
             <!--Escrever Postagem-->
-            <div class="card">
+            <div class="card" id="postagens">
                 <div class="card-header">
                     <h1 class="text-center width='100%'">Publicações</h1>
                 </div>
