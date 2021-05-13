@@ -101,30 +101,35 @@
             <!--Escrever Postagem-->
 
 
-            <!--Botões-->
-            <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
-                <button class="btn btn-secondary mt-2 mr-3" (click)='cadastrar()'>Publicar</button>
-            </div>
-            <!--Botões-->
+           
 
+        </div>
+    </div>
 
-            <!--Visualização das Postagens-->
-            <div class="container">
-                <div class="mt-5" *ngFor='let posts of listaPosts'>
-                    <div class="card">
-                        <h5 class="card-header">{{posts.usuarioCriador.nome}}</h5>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
-                            <p class="card-text text-justify">{{posts.textoPosts}}</p>
-                            <a [routerLink]="['/editar-posts', posts.idPosts]"  class="btn btn-primary mr-3">Editar</a>
-                            <a [routerLink]="['/delete-posts', posts.idPosts]" class="btn btn-danger mr-3">Apagar</a>
-                        </div>
+    <div class="row d-flex justify-content-end mt-1 mr-5">
+        <!--Botões-->
+         <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
+            <button class="btn btn-secondary mt-1 mr-5" (click)='cadastrar()'>Publicar</button>
+        </div>
+        <!--Botões-->
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <!--Visualização das Postagens-->
+        <div class="container">
+            <div class="mt-5" *ngFor='let posts of listaPosts'>
+                <div class="card">
+                    <h5 class="card-header">{{posts.usuarioCriador.nome}}</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
+                        <p class="card-text text-justify">{{posts.textoPosts}}</p>
+                        <a [routerLink]="['/editar-posts', posts.idPosts]"  class="btn btn-primary mr-3">Editar</a>
+                        <a [routerLink]="['/delete-posts', posts.idPosts]" class="btn btn-danger mr-3">Apagar</a>
                     </div>
                 </div>
             </div>
-            <!--Visualização das Postagens-->
-
         </div>
+        <!--Visualização das Postagens-->
     </div>
 
 </div>
