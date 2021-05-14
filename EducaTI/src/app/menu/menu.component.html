@@ -13,7 +13,7 @@
         </li>
         <li class="nav-item">
 
-            <a class="nav-link txtcollor" [routerLink]= "['/conta', id]">Meu Perfil</a>
+            <a class="nav-link txtcollor mr-4" [routerLink]= "['/conta', id]">Meu Perfil</a>
 
           </li>
           <li class="nav-item">
@@ -24,10 +24,10 @@
           </li>
           
     </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 txtcollor" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-info my-2 my-sm-0 txtcollor" type="submit">Pesquisar</button>
-      </form>
+      
+        
+        <button class="btn btn-outline-info my-2 my-sm-0 txtcollor" type="submit" (click)='sair()'>Sair</button>
+      
       <div class="nav-item active">
         <a class="nav-link txtcollor" [routerLink]= "['/conta', id]">
             <img type="button" class="rounded-circle border border-dark outline" src="{{foto}}"
