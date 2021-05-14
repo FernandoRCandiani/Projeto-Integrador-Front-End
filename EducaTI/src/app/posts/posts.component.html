@@ -97,6 +97,12 @@
                   </select>
 
               </div>
+              <div class="col-md-4 mb-3">
+                <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
+                    <button class="btn btn-secondary mt-1 mr-5" (click)='cadastrar()'>Publicar</button>
+                </div>
+              </div>
+                
           </div>
           <!--Escrever Postagem-->
 
@@ -108,9 +114,7 @@
 
   <div class="row d-flex justify-content-end mt-1 mr-5">
       <!--Botões-->
-       <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
-          <button class="btn btn-secondary mt-1 mr-5" (click)='cadastrar()'>Publicar</button>
-      </div>
+      
       <!--Botões-->
   </div>
 
@@ -122,6 +126,7 @@
                   <h5 class="card-header">{{posts.usuarioCriador.nome}}</h5>
                   <div class="card-body">
                       <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
+                      <h6 class="text-center text-secondary">Tema: {{posts.temas.titulo}}</h6>
                       <p class="card-text text-justify">{{posts.textoPosts}}</p>
                       
                   </div>
