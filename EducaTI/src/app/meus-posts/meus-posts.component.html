@@ -25,6 +25,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">{{item.tituloPosts}}</h5>
+                <h6 class="text-center text-secondary">Tema: {{item.temas.titulo}}</h6>
                 <p class="card-text text-justify">{{item.textoPosts}}</p>
                 <a [routerLink]="['/editar-posts', item.idPosts]"  class="btn btn-primary mr-3">Editar</a>
                 <a [routerLink]="['/delete-posts', item.idPosts]" class="btn btn-danger mr-3">Apagar</a>
