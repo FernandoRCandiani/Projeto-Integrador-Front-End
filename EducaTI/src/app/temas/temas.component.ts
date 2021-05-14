@@ -30,13 +30,12 @@ export class TemasComponent implements OnInit {
     ) {}
 
   ngOnInit() {
-    window.scroll(0,0)
-
-    if (environment.token ==''){
+       if (environment.token ==''){
       this.router.navigate(['/entrar'])
     }
 
     this.findAllTemas()
+    this.getAllTema()
    
   }
 
@@ -49,12 +48,18 @@ export class TemasComponent implements OnInit {
     })
   }
 
+  getAllTema(){
+    this.temaService.getAllTema().subscribe((resp : Temas[]) =>{
+      this.listaTemas = resp
+    })
+  }
+
   findAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Temas[])=>{
       this.listaTemas = resp })
   }
 
-  inscreverUsuario(id: number){
+   inscreverUsuario(id: number){
     
     this.authService.inscreverUsuario(this.idUser, id).subscribe((resp: Usuario)=>{
       this.usuario = resp

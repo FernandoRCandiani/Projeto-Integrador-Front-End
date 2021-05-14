@@ -1,40 +1,41 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center text-white">Temas</h1>
 
-            <h5 class='fs-18 text-center text-white'>Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
+    <div class="row bg-dark d-flex align-items-center">
+        <div class="col-md-6">
 
-            <div class="row d-flex justify-content-center mt-4 mb-5 ">
-                <div class="col-md-3"> 
-                    <div class="form-group">
-                        <input [(ngModel)]='tema.titulo' type="text" class="form-control" id="descricao" placeholder="Digite um titulo">
-                    </div>
-
-                    <div class="form-group">
-                        <input [(ngModel)]='tema.texto' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
-                    </div>
-                    
-                    <div class="d-flex justify-content-center">
-                          <button  class="btn btn-outline-success my-2 my-sm-0 txtcollor tmletra" (click)='cadastrar()'>Cadastrar</button>
-                    </div>
+            <div class="row d-flex justify-content-center"> 
+                <div class="col-md-6 text-white">
+                    <h1 class="fs-54">Temas</h1>
+                    <h5 class="fs-18">Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
                 </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-light mr-2" type="button" data-toggle="modal" data-target="#novoTema">Novo Tema</button>
+                    <a class="btn btn-outline-light" href="#temas">Ver Temas</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="https://i.imgur.com/Q10GJ1h.png" alt="Compartilhando" width="500px" height="500px">
+        </div>
     </div>
 
-    <div class="row d-flex justify-content-center">
-        <form class="form-inline my-2 my-lg-0">
-            <input [(ngModel)] = 'tema.titulo' name="titulo" class="form-control mr-sm-2 ml-4 txtcollor" type="search" placeholder="Pesquisar por título:" aria-label="Pesquisar">
+</div>
 
-            <button class="btn btn-outline-info my-2 my-sm-0 txtcollor tmletra" type="submit" (click)= 'pesquisar(tema.titulo)'>Pesquisar</button>
 
-            <input [(ngModel)] = 'tema.texto' name="texto" class="form-control mr-sm-2 ml-4 txtcollor" type="search" placeholder="Pesquisar por texto:" aria-label="Pesquisar">
+<div class="container mb-5 mt-5" id='temas'>
 
-            <button class="btn btn-outline-info my-2 my-sm-0 txtcollor tmletra" type="submit" (click)= 'pesquisarDescricao(tema.texto)'>Pesquisar</button>
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-        </form>
-    </div>
-</div>  
+          <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-todosTemas-tab" data-toggle="tab" href="#todosTemas" role="tab" aria-controls="nav-todosTemas" aria-selected="true">Todos os Temas</a>
 
+<<<<<<< HEAD
 <div class="container-fluid">
     <div class="row d-flex justify-content-center">
         <div class="col-md-12">
@@ -69,22 +70,56 @@
                             
                           <button class="btn" [routerLink]="['editar-tema', tema.id]">Editar</button> 
                         </div>
-                    </div>
-                </div>
-            </div>
+=======
+          <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-temasInscritos-tab" data-toggle="tab" href="#temasInscritos" role="tab" aria-controls="nav-temasInscritos" aria-selected="false">Temas Inscritos</a>          
+
         </div>
-    </div>
-    
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="todosTemas" role="tabpanel" aria-labelledby="nav-todosTemas-tab">
+
+            <div class="card-columns">
+                <div class="card text-center">
+                    <div class="card-body" *ngFor='let tema of listaTemas'>
+                      <h5 class="card-title">{{tema.titulo}}</h5>
+                      <p class="card-text">{{tema.texto}}</p>
+                      <p class="card-text"><small class="text-muted">{{tema.nivel}}</small></p>
+                      <p class="card-text"><small class="text-muted">{{tema.usuariosInscritos}}</small></p>
+                      <button class="btn btn-success" (click)='inscreverUsuario(tema.id)'>Inscrever-se</button>                             
+>>>>>>> 48a8c49f6069066dde2b85a50ea55a1f6e81986d
+                    </div>
+                  </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="tab-pane fade" id="temasIncritos" role="tabpanel" aria-labelledby="nav-temasInscritos-tab">...</div>
+
     </div>
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Modal -->
-  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal fade" id="novoTema" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+          <h5 class="modal-title" id="TituloModalCentralizado">Novo Tema</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -92,26 +127,20 @@
         <div class="modal-body">
 
           <div class="form-group">
-              <label for="titulo">Título</label>
-              <input type="text" class="form-control" id="titulo" placeholder="Digite um titulo">
+              <label for="titulo"></label>
+              <input [(ngModel)]='tema.titulo' type="text" class="form-control" id="titulo" placeholder="Digite um título">
           </div>
 
-        <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>           
-        </div>
-
-        <div class="form-group">
-            <label for="escolhaUmTema">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a> : </label>
-            <select class="form-control" name="tema" id="tema">
-                <option value="">Temas</option>
-            </select>           
-        </div>
+          <div class="form-group">
+            <label for="texto"></label>
+            <textarea [(ngModel)]='tema.texto'  class='form-control' name="texto" id="texto" rows="3" placeholder="Digite o texto" ></textarea>
+          </div>
 
         </div>
+        
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Publicar</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)='cadastrar()'>Cadastrar</button>
         </div>
       </div>
     </div>

@@ -66,24 +66,75 @@
     </div>
 
     
+
+            <!-- Nova Publicação -->
+    <div class="col m7">
     
-    <div class="row justify-content-center mt-5">
+        <div class="row-padding">
+          <div class="col m12">
+            <div class="card round white">
+              <div class="container padding">
+                <h3 class="opacity">Escreva um titulo: </h3>
+                <p contenteditable="true" class="border padding">Escreva o titulo da sua Postagem.</p>
+                <h3 class="opacity">Publicação</h3>
+                <p contenteditable="true" class="border padding">Compartilhe uma ideia.</p>
+                
+                <button type="button" class="button theme"><i class="fa fa-pencil"></i> Post</button> 
+              </div>
+            </div>
+          </div>
+        </div>
         
-
-        <div class="col-md-9">
-
-            <!--Escrever Postagem-->
+        <div class="container card white round margin"><br>
+          <img src="/w3images/avatar2.png" alt="Avatar" class="left circle margin-right" style="width:60px">
+          <span class="right opacity">1 min</span>
+          <h4>John Doe</h4><br>
+          <hr class="clear">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="row-padding" style="margin:0 -16px">
+              <div class="half">
+                <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="margin-bottom">
+              </div>
+              <div class="half">
+                <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="margin-bottom">
+            </div>
+          </div>
+          <button type="button" class="button theme-d1 margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+          <button type="button" class="button theme-d2 margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div>
+        
+        <div class="container card-white round-margin"><br>
+          <img src="/w3images/avatar5.png" alt="Avatar" class="left circle margin-right" style="width:60px">
+          <span class="right opacity">16 min</span>
+          <h4>Jane Doe</h4><br>
+          <hr class="clear">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <button type="button" class="button theme-d1 margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+          <button type="button" class="button theme-d2 margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div>  
+  
+        <div class="container card white round margin"><br>
+          <img src="/w3images/avatar6.png" alt="Avatar" class="left circle margin-right" style="width:60px">
+          <span class="right opacity">32 min</span>
+          <h4>Angie Jane</h4><br>
+          <hr class="clear">
+          <p>Have you seen this?</p>
+          <img src="/w3images/nature.jpg" style="width:100%" class="margin-bottom">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <button type="button" class="button theme-d1 margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+          <button type="button" class="button theme-d2 margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div> 
+        
+      <!-- End Middle Column -->
+      </div>
             <div class="card" id="postagens">
                 <div class="card-header">
                     <h1 class="text-center width='100%'">Publicações</h1>
                 </div>
-
                 <div class="form-group">
-
                     <label for="tituloPosts" class="mt-2">Título</label>
                     <input [(ngModel)]='posts.tituloPosts' type="text" class="form-control width='100%'"
                         id="tituloPosts" placeholder="Digite o título da sua postagem">
-
                     <label for="textoPosts" class="mt-2">Sua postagem</label>
                     <textarea [(ngModel)]='posts.textoPosts' type="text" class="form-control width='100%'"
                         id="textoPosts" rows="4" placeholder="Digite aqui sua postagem">
@@ -95,17 +146,11 @@
                         {{item.titulo}}
                     </option>
                     </select>
-
                 </div>
             </div>
             <!--Escrever Postagem-->
-
-
            
-
         </div>
-    </div>
-
     <div class="row d-flex justify-content-end mt-1 mr-5">
         <!--Botões-->
          <div class="btn-group justify-align-center" role="group" aria-label="Exemplo básico">
@@ -113,7 +158,6 @@
         </div>
         <!--Botões-->
     </div>
-
     <div class="row d-flex justify-content-center">
         <!--Visualização das Postagens-->
         <div class="container">
@@ -131,5 +175,3 @@
         </div>
         <!--Visualização das Postagens-->
     </div>
-
-</div>

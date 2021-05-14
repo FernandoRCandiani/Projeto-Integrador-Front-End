@@ -5,11 +5,14 @@ html, body{
     -webkit-background-size: cover;
     background-size: cover;
     background-position:fixed;  
-    scroll-behavior: smooth;
-   
+
+    scroll-behavior: smooth ;
 }
 
+
 .conteudo{
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.9);
     
 }
+
+
