@@ -1,9 +1,9 @@
 #fundo{
-    background-image: url('https://i.imgur.com/JVRLGCm.jpg');
+    background-image: url('https://cdn.statically.io/img/free4kwallpapers.com/uploads/originals/2019/08/14/high-tech-earth-wallpaper.jpg');
     background-repeat:no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    background-position:fixed;   
+    background-position:center;   
 }
 .conteudo{
     background: rgba(0,0,0,0.5);
