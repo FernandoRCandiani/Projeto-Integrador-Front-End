@@ -17,29 +17,34 @@ ul.social-network li{
 
 .fa-github:hover{
     color: #35B2ff;
-    opacity: 0.5;
+    transition: 0.5s ease;
 }
 
 .fa-linkedin:hover{
     color:#35B2ff;
-    opacity: 0.5;
+    transition: 0.5s ease;
 }
 
 .fa-instagram:hover{
     color: #35B2ff;
-    opacity: 0.5;
+    transition: 0.5s ease;
 }
 
 .bg-collor{
 
-    background-color: #020005;
+    background-color: #606097;
 }
 
 .txtcollor{
-    color: #35B2ff;
+    color: white;
 }
 
 a:link 
 { 
  text-decoration:none; 
 } 
+
+.link:hover{
+    color:#35B2ff;
+    transition: 0.5s ease;
+}

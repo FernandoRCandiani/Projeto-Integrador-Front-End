@@ -1,30 +1,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <h1 id="titulo" class="text-center clicavel" routerLink=''>Home</h1>
-
 <div class="container-fluid">
-    <div class="d-flex flex-wrap justify-content-center align-items-center">
+    <h5 *ngIf='authService.logado()==false' id="titulo" class="text-start clicavel mb-5" routerLink='/posts'>Voltar</h5>
+    <div class="d-flex flex-wrap justify-content-center align-items-center rounded">
 
 
         <!--NOME 1-->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="https://wallpapercave.com/wp/wp4247401.jpg" alt="Avatar" style="width:100%;height:100%;">
+                    <img src="https://avatars.githubusercontent.com/u/79520984?v=4" alt="Avatar" style="width:100%;height:100%; border-radius: 10px;">
                 </div>
                 <div class="flip-card-back">
                     <!--PROFILE CARD-->
                     <div class="card">
                         <div>
-                            <img src="https://i.imgur.com/dK5a2RY.png?1" alt="John" style="height: 290px; width:100%">
-                            <h2 class="fontesLetras">John Doe</h2>
-                            <p class="fontesLetras">CEO & Founder, Example</p>
-                            <p class="fontesLetras">Harvard University</p>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <p><button>Contact</button></p>
+                            <h2 class="fontesLetras">Fernando Candiani</h2>
+                            <p class="fontesLetras">Equipe EducaTI</p>
+                            <p class="fontesLetras">Generation Brasil</p>
+                            <a href="#"><i class="fa fa-linkedin mr-3"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                            <p class="contato">Contato</p>
                         </div>
                     </div>
                     <!--PROFILE CARD-->
@@ -38,21 +34,18 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="https://images7.alphacoders.com/100/1005643.jpg" alt="Avatar" style="width:100%;height:100%;">
+                    <img src="https://i.imgur.com/sdb3ItQ.jpg" alt="Avatar" style="width:100%;height:100%;border-radius: 10px;">
                 </div>
                 <div class="flip-card-back">
                     <!--PROFILE CARD-->
                     <div class="card">
                         <div>
-                            <img src="https://i.imgur.com/dK5a2RY.png?1" alt="John" style="height: 290px; width:100%">
-                            <h2 class="fontesLetras">John Doe</h2>
-                            <p class="fontesLetras">CEO & Founder, Example</p>
-                            <p class="fontesLetras">Harvard University</p>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <p><button>Contact</button></p>
+                            <h2 class="fontesLetras">Igor Pereira Vieira</h2>
+                            <p class="fontesLetras">Equipe EducaTI</p>
+                            <p class="fontesLetras">Generation Brasil</p>
+                            <a href="#"><i class="fa fa-linkedin mr-3"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                            <p class="contato">Contato</p>
                         </div>
                     </div>
                     <!--PROFILE CARD-->
@@ -66,21 +59,19 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="https://image.winudf.com/v2/image/Y29tLmhkd2Nhci5uZXd3YXRlcmZhbGxfc2NyZWVuc2hvdHNfNF83ZGZlMmIxNg/screen-4.jpg?fakeurl=1&type=.jpg" alt="Avatar" style="width:100%;height:100%;">
+                    <img src="https://image.winudf.com/v2/image/Y29tLmhkd2Nhci5uZXd3YXRlcmZhbGxfc2NyZWVuc2hvdHNfNF83ZGZlMmIxNg/screen-4.jpg?fakeurl=1&type=.jpg" alt="Avatar" style="width:100%;height:100%;border-radius: 10px;">
                 </div>
                 <div class="flip-card-back">
                     <!--PROFILE CARD-->
                     <div class="card">
                         <div>
-                            <img src="https://i.imgur.com/dK5a2RY.png?1" alt="John" style="height: 290px; width:100%">
-                            <h2 class="fontesLetras">John Doe</h2>
-                            <p class="fontesLetras">CEO & Founder, Example</p>
-                            <p class="fontesLetras">Harvard University</p>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <p><button>Contact</button></p>
+                            
+                            <h2 class="fontesLetras">Raquel Lopes</h2>
+                            <p class="fontesLetras">Equipe EducaTI</p>
+                            <p class="fontesLetras">Generation Brasil</p>
+                            <a href="#"><i class="fa fa-linkedin mr-3"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                            <p class="contato">Contato</p>
                         </div>
                     </div>
                     <!--PROFILE CARD-->
@@ -94,21 +85,18 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="https://wallpapercave.com/wp/wp1844664.jpg" alt="Avatar" style="width:100%;height:100%;">
+                    <img src="https://wallpapercave.com/wp/wp1844664.jpg" alt="Avatar" style="width:100%;height:100%;border-radius: 10px;">
                 </div>
                 <div class="flip-card-back">
                     <!--PROFILE CARD-->
                     <div class="card">
                         <div>
-                            <img src="https://i.imgur.com/dK5a2RY.png?1" alt="John" style="height: 290px; width:100%">
-                            <h2 class="fontesLetras">John Doe</h2>
-                            <p class="fontesLetras">CEO & Founder, Example</p>
-                            <p class="fontesLetras">Harvard University</p>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <p><button>Contact</button></p>
+                            <h2 class="fontesLetras">Richard Fujii</h2>
+                            <p class="fontesLetras">Equipe EducaTI</p>
+                            <p class="fontesLetras">Generation Brasil</p>
+                            <a href="#"><i class="fa fa-linkedin mr-3"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                            <p class="contato">Contato</p>
                         </div>
                     </div>
                     <!--PROFILE CARD-->
@@ -122,21 +110,18 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="https://image.winudf.com/v2/image/Y29tLmNvc21pY21vYmlsZS5sdy5wYXJpc19saXZlX3dhbGxwYXBlcl9zY3JlZW5fMF8xNTI4NzUyMTIyXzAxMw/screen-0.jpg?fakeurl=1&type=.jpg" alt="Avatar" style="width:100%;height:100%;">
+                    <img src="https://avatars.githubusercontent.com/u/71104502?v=4" alt="Avatar" style="width:100%;height:100%;border-radius: 10px;">
                 </div>
                 <div class="flip-card-back">
                     <!--PROFILE CARD-->
                     <div class="card">
                         <div>
-                            <img src="https://i.imgur.com/dK5a2RY.png?1" alt="John" style="height: 290px; width:100%">
-                            <h2 class="fontesLetras">John Doe</h2>
-                            <p class="fontesLetras">CEO & Founder, Example</p>
-                            <p class="fontesLetras">Harvard University</p>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <p><button>Contact</button></p>
+                            <h2 class="fontesLetras">Scarlet Araújo</h2>
+                            <p class="fontesLetras">Equipe EducaTI</p>
+                            <p class="fontesLetras">Generation Brasil</p>
+                            <a href="#"><i class="fa fa-linkedin mr-3"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                            <p class="contato">Contato</p>
                         </div>
                     </div>
                     <!--PROFILE CARD-->

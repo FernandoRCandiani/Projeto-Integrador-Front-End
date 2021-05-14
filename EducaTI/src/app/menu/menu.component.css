@@ -15,26 +15,16 @@ ul.social-network li{
     padding: 10px;
 }
 
-.fa-github:hover{
-    color: #35B2ff;
-}
 
-.fa-linkedin:hover{
-    color:#35B2ff;
-}
-
-.fa-instagram:hover{
-    color: #35B2ff;
-}
 
 .bg-collor{
 
-    background-color: #020005;
+    background-color: #606097;
     opacity: 0.9;
 }
 
 .txtcollor{
-    color: #35B2ff;
+    color: white;
 }
 
 a:link 
@@ -47,4 +37,9 @@ a:link
 
 .escondeMenu { 
     overflow: hidden; 
+}
+
+.nav-link:hover{
+    color: #35B2ff;
+    transition: 0.5s ease;
 }
