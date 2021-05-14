@@ -1,1 +1,35 @@
+<div class="row d-flex align-items-center bg-light">
 
+    <div class="col-md-6">
+        <img class="imagem-group ml-5" src="https://i.imgur.com/7mTn4EC.png" alt="Conversa em grupo" height="500px" width="500px">
+    </div>
+
+    <div class="col-md-6">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 text-white font-weight-bold">
+                <h1 class="fs-54 text-dark">Minhas Postagens</h1>
+                <h5 class="fs-18 text-dark">Aqui estão as postagens que você escreveu:</h5>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-6 mb-5">
+                <a class="btn btn-outline-dark" href="#postagens">Editar ou apagar postagens</a>
+            </div>
+        </div>                
+    </div>
+
+</div>
+<div class="container">
+    <div class="mt-5" id="postagens" *ngFor='let posts of listaPosts'>
+        <div class="card">
+            <h5 class="card-header">{{posts.usuarioCriador.nome}}</h5>
+            <div class="card-body">
+                <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
+                <p class="card-text text-justify">{{posts.textoPosts}}</p>
+                <a [routerLink]="['/editar-posts', posts.idPosts]"  class="btn btn-primary mr-3">Editar</a>
+                <a [routerLink]="['/delete-posts', posts.idPosts]" class="btn btn-danger mr-3">Apagar</a>
+            </div>
+        </div>
+    </div>
+</div>
