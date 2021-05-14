@@ -17,14 +17,10 @@
             <h1 class="text-center width='100%'">Publicações</h1>
         </div>
 
-        <div class="form-group">
-
-            <input [(ngModel)]='posts.tituloPosts' type="text" class="form-control width='100%'"
-                id="tituloPosts" placeholder="Digite o título da sua postagem">
-
-            <textarea [(ngModel)]='posts.textoPosts' type="text" class="form-control width='100%'"
-                id="textoPosts" rows="4" placeholder="Digite aqui sua postagem">
-            </textarea>
+        <div class="card-body">
+            <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
+            <p class="card-text text-justify">{{posts.textoPosts}}</p>
+            
         </div>
     </div>
     <!--Escrever Postagem-->
