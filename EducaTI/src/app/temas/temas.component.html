@@ -48,7 +48,7 @@
         <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-todosTemas-tab" data-toggle="tab" href="#todosTemas" role="tab" aria-controls="nav-todosTemas" aria-selected="true">Todos os Temas</a>
 
 
-          <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-temasInscritos-tab" data-toggle="tab" href="#temasInscritos" role="tab" aria-controls="nav-temasInscritos" aria-selected="false">Meus Temas</a>    
+          <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-temasInscritos-tab" data-toggle="tab" href="#temasInscritos" role="tab" aria-controls="nav-temasInscritos" aria-selected="false">Temas Inscritos</a>    
           
           <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-meusTemas-tab" data-toggle="tab" href="#meusTemas" role="tab" aria-controls="nav-meusTemas" aria-selected="false">Meus Temas</a>    
 
@@ -63,59 +63,10 @@
                     <div class="card-body" >
                       <h5 class="card-title">{{tema.titulo}}</h5>
                       <p class="card-text">{{tema.texto}}</p>
-                    <button class="btn btn-outline-success" (click)='inscreverUsuario(tema.id)'>Inscrever-se</button>                             
+                    <button class="btn btn-outline-success" >Inscrever-se</button>
                     </div>
-=======
-        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-temasInscritos-tab" data-toggle="tab" href="#temasInscritos" role="tab" aria-controls="nav-temasInscritos" aria-selected="false">Temas Inscritos</a>          
-
-      </div>
-  </nav>
-
-  <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="todosTemas" role="tabpanel" aria-labelledby="nav-todosTemas-tab">
-
-          <div class="card-columns">
-              <div class="card text-center">
-                  <div class="card-body" *ngFor='let tema of listaTemas'>
-                    <h5 class="card-title">{{tema.titulo}}</h5>
-                    <p class="card-text">{{tema.texto}}</p>
-                    <p class="card-text"><small class="text-muted">{{tema.nivel}}</small></p>
-                    <p class="card-text"><small class="text-muted">{{tema.usuariosInscritos}}</small></p>
-                    <button class="btn btn-success" (click)='inscreverUsuario(tema.id)'>Inscrever-se</button>                             
-
-                  </div>
-                </div>
-          </div>
-
-
-        </div>
-
-        <div class="tab-pane fade" id="temasInscritos" role="tabpanel" aria-labelledby="nav-temasInscritos-tab">
-
-
-
-      </div>
-
-      <div class="tab-pane fade" id="temasIncritos" role="tabpanel" aria-labelledby="nav-temasInscritos-tab">...</div>
-
-  </div>
-</div>
-
-
-
-
-
-            <div class="card-columns">
-                <div class="card text-center border-info text-dark bg-light mb-3" *ngFor='let tema of listaTemas'>
-                    <div class="card-body" >
-                      <h5 class="card-title">{{tema.titulo}}</h5>
-                      <p class="card-text">{{tema.texto}}</p>
-                    </div>
-                    <button class="btn btn-outline-success" type=" button" data-toggle="modal" data-target="#fazerPostagem">Fazer Postagem</button>
-                </div>
             </div>
-
-
+          </div>
         </div>
 
         <div class="tab-pane fade" id="meusTemas" role="tabpanel" aria-labelledby="nav-meusTemas-tab">
@@ -126,8 +77,7 @@
                     <div class="card-body" >
                       <h5 class="card-title">{{tema.titulo}}</h5>
                       <p class="card-text">{{tema.texto}}</p>
-                      <button class="btn btn-outline-success mr-4" [routerLink]="['editar-tema', tema.id]">Editar</button>
-                      <button class="btn btn-outline-danger" [routerLink]="['delete-tema', tema.id]">Apagar</button>                            
+                      <button class="btn btn-outline-success mr-4" [routerLink]="['editar-tema', tema.id]">Editar</button>                      
                     </div>
                   </div>
             </div>
@@ -170,40 +120,5 @@
       </div>
     </div>
   </div>
-
-
-
-   <!-- Modal -->
-   <div class="modal fade" id="fazerPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="TituloModalCentralizado">Novo Tema</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-          <div class="form-group">
-              <label for="titulo"></label>
-              <input [(ngModel)]='posts.tituloPosts' type="text" class="form-control" id="titulo" placeholder="Digite um título">
-          </div>
-
-          <div class="form-group">
-            <label for="texto"></label>
-            <textarea [(ngModel)]='posts.textoPosts'  class='form-control' name="texto" id="texto" rows="3" placeholder="Digite o texto" ></textarea>
-          </div>
-
-        </div>
-        
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-=======
 </div>
 
