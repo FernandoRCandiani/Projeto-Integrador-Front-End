@@ -39,15 +39,7 @@ export class MeusPostsComponent implements OnInit {
   findByIdUser(id: number){
     this.authService.encontrar(id).subscribe((resp: Usuario)=>{
       this.user = resp
-      this.findAllPosts()
     })
   }
-
-  findAllPosts(){
-    this.postService.getAllPosts().subscribe((resp: Posts[])=>{
-      this.listaPosts = resp
-    })
-  }
-
 
 }

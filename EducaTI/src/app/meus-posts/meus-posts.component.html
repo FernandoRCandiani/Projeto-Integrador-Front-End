@@ -21,14 +21,13 @@
 
 </div>
 <div class="container">
-    <div class="mt-5" id="postagens" *ngFor='let posts of listaPosts'>
+    <div class="mt-5" id="postagens" *ngFor='let item of user.postsUsuario'>
         <div class="card">
-            <h5 class="card-header">{{posts.usuarioCriador.nome}}</h5>
             <div class="card-body">
-                <h5 class="card-title text-center">{{posts.tituloPosts}}</h5>
-                <p class="card-text text-justify">{{posts.textoPosts}}</p>
-                <a [routerLink]="['/editar-posts', posts.idPosts]"  class="btn btn-primary mr-3">Editar</a>
-                <a [routerLink]="['/delete-posts', posts.idPosts]" class="btn btn-danger mr-3">Apagar</a>
+                <h5 class="card-title text-center">{{item.tituloPosts}}</h5>
+                <p class="card-text text-justify">{{item.textoPosts}}</p>
+                <a [routerLink]="['/editar-posts', item.idPosts]"  class="btn btn-primary mr-3">Editar</a>
+                <a [routerLink]="['/delete-posts', item.idPosts]" class="btn btn-danger mr-3">Apagar</a>
             </div>
         </div>
     </div>
