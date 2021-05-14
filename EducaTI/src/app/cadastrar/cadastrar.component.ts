@@ -37,6 +37,7 @@ export class CadastrarComponent implements OnInit {
       this.alertas.showAlertDanger('Está faltando seu E-mail')
     }
     
+    
 
     if(this.usuario.senha != this.confirmaSenha){
       this.alertas.showAlertDanger('Senhas estão incorretas')
@@ -45,6 +46,10 @@ export class CadastrarComponent implements OnInit {
         this.usuario = resp
         this.router.navigate(['/entrar'])
         this.alertas.showAlertSuccess('Parabéns, usuario cadastrado com sucesso')
+      },erro=>{
+        if(erro.status == 401){
+          this.alertas.showAlertDanger('ERRO!! Verificar dados cadastrais')
+        }
       })
     }
   }
