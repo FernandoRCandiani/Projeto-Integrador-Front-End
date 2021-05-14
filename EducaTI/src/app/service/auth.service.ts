@@ -26,6 +26,11 @@ export class AuthService {
         return this.http.post<Usuario>("http://localhost:8080/usuario/cadastrar", usuario)
       }
 
+      getByIdUser(id : number) : Observable<Usuario>{
+        return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+
+      }
+
       inscreverUsuario(idTema: number, idUser: number): Observable<Usuario>{
         return this.http.post<Usuario>(`http://localhost:8080/usuario/inscricao/${idTema}/${idUser}`, this.token)
       }
